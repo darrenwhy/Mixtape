@@ -1,3 +1,5 @@
+import time,sys
+
 print(" __  __ _______   _________       _____  ______ ")
 print("|  \/  |_   _\ \ / /__   __|/\   |  __ \|  ____|")
 print("| \  / | | |  \ V /   | |  /  \  | |__) | |__   ")
@@ -12,9 +14,21 @@ no = "powering off..."
 
 print(" ")
 print("launch? - options: yes // no")
-input("answer: ")
+answer = input("answer: ")
 
-if yes:
+if answer == "yes":
+    print(" ")
     print(yes)
-    pass
+    print(" ")
+for i in range(100+1):
+    time.sleep(0.1)
+    sys.stdout.write(('█'*i)+(''*(100-i))+("\r [ %d"%i+"% ] "))
+    sys.stdout.flush()
+
+# fix the code below, syntax error with the elif
+
+elif answer == "no"
     print(no)
+    sys.exit(0)
+else:
+    print("please enter yes or no")
